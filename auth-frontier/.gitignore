@@ -1,0 +1,19 @@
+# Burp Suite & Proxy Captures
+*.burp
+*.pcap
+*.pcapng
+collaborator-logs/
+
+# Wordlists & Local Test Data
+wordlists/*.txt
+*.csv
+
+# Environment & Secrets
+.env
+.env.local
+
+# OS & Editor Artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

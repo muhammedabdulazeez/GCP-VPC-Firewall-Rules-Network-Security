@@ -1,0 +1,17 @@
+# Terraform & IaC State
+*.tfstate
+*.tfstate.*
+.terraform/
+*.tfvars
+
+# GCP Credentials & Local Config
+*-key.json
+credentials.json
+.env
+.env.local
+
+# OS & Editor Artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,223 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    color: #0f172a;
+    background-color: #f8fafc;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* GitHub-inspired Markdown Prose Styling */
+.md-prose {
+  color: #1e293b;
+  font-size: 0.9375rem;
+  line-height: 1.68;
+  max-width: 78ch;
+}
+
+.md-prose > *:first-child {
+  margin-top: 0;
+}
+
+.md-prose h1 {
+  font-family: var(--font-display);
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: #0f172a;
+  padding-bottom: 0.625rem;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid #e2e8f0;
+  text-wrap: balance;
+}
+
+.md-prose h2 {
+  font-family: var(--font-display);
+  font-size: 1.3125rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+  color: #0f172a;
+  padding-bottom: 0.375rem;
+  margin-top: 2rem;
+  margin-bottom: 0.875rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.md-prose h3 {
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #0f172a;
+  margin-top: 1.5rem;
+  margin-bottom: 0.625rem;
+}
+
+.md-prose p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #334155;
+}
+
+.md-prose ul,
+.md-prose ol {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  color: #334155;
+}
+
+.md-prose ul {
+  list-style-type: disc;
+}
+
+.md-prose ol {
+  list-style-type: decimal;
+}
+
+.md-prose li {
+  margin-bottom: 0.375rem;
+}
+
+.md-prose li > p {
+  margin-bottom: 0.375rem;
+}
+
+.md-prose strong {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.md-prose a {
+  color: #1d4ed8;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: rgba(29, 78, 216, 0.35);
+}
+
+.md-prose a:hover {
+  text-decoration-color: #1d4ed8;
+}
+
+.md-prose code {
+  font-family: var(--font-mono);
+  font-size: 0.84em;
+  background-color: #f1f5f9;
+  color: #0f172a;
+  padding: 0.15em 0.38em;
+  border-radius: 4px;
+  border: 1px solid #e2e8f0;
+}
+
+.md-prose pre {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  background-color: #0f172a;
+  color: #e2e8f0;
+  padding: 1rem 1.125rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-top: 0.75rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid #1e293b;
+}
+
+.md-prose pre code {
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+  border: none;
+  font-size: inherit;
+}
+
+.md-prose blockquote {
+  margin: 1rem 0 1.25rem;
+  padding: 0.875rem 1rem;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  color: #334155;
+}
+
+.md-prose blockquote > p:last-child {
+  margin-bottom: 0;
+}
+
+.md-prose hr {
+  border: none;
+  border-top: 1px solid #e2e8f0;
+  margin: 1.75rem 0;
+}
+
+.md-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.75rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.875rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.md-prose th {
+  background-color: #f8fafc;
+  color: #0f172a;
+  font-weight: 600;
+  text-align: left;
+  padding: 0.625rem 0.875rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.md-prose td {
+  padding: 0.625rem 0.875rem;
+  border-bottom: 1px solid #f1f5f9;
+  color: #334155;
+  vertical-align: top;
+}
+
+.md-prose tr:last-child td {
+  border-bottom: none;
+}
+
+.md-prose input[type="checkbox"] {
+  margin-right: 0.5rem;
+  accent-color: #1d4ed8;
+  width: 0.9rem;
+  height: 0.9rem;
+  vertical-align: -2px;
+}
+
+.md-prose img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  margin: 1.25rem 0;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
